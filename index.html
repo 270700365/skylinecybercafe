@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skyline Cyber Café - Session Billing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to Skyline Cyber Café</h1>
+
+  <div id="login-section">
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="loginUser()">Login</button>
+  </div>
+
+  <div id="session-section" style="display:none;">
+    <h2>Session Active</h2>
+    <p>Session Time: <span id="timer">0</span> mins</p>
+    <p>Pages Printed: <input type="number" id="printCount" value="0"></p>
+    <p>Pages Scanned: <input type="number" id="scanCount" value="0"></p>
+    <button onclick="endSession()">End Session & Get Bill</button>
+  </div>
+
+  <div id="bill-section" style="display:none;">
+    <h2>Billing Summary</h2>
+    <p>Total Time: <span id="totalTime"></span> mins</p>
+    <p>Printing Cost: $<span id="printCost"></span></p>
+    <p>Scanning Cost: $<span id="scanCost"></span></p>
+    <p><strong>Total Bill: $<span id="totalBill"></span></strong></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
